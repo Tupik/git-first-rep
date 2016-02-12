@@ -8,12 +8,26 @@
 
 	 <script type="text/javascript">
 	var el;
+	var arr;
 	
-	el=parseInt(prompt('Write how many numbers you want to see in your array'));
+	el=parseInt(prompt('Write how many numbers do you want to see in your array'));
 	
-	document.write('Hello, world!'+'<br>'+"Your array'll be with "+el+' numbers');
+	arr=prompt('Write your array');
 	
-	 </script>
+	if (arr.length!=el) { 
+	alert('Wrong number of elements')
+	document.write('Error') }
+		else { 
+				document.write('Hello, world!'+'<br>'+"Your array'll be with "+el+' numbers'+'<br>')
+				PrintMass(arr)
+	}
 	
+	function PrintMass(a){
+	for(i=0;i<a.length;i++)
+		document.write(a[i]+" ");
+}
+	
+	 </script>	 
+
 </body>
 </html>
